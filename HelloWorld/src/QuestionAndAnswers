@@ -5,6 +5,7 @@
 - Objects are stored in HEAP and reference variables are stored in STACK.
 - Primitive data types are stored in STACK.
 - Java does not have pass-by-reference. Java uses pass-by-value for all variable passing.
+- We cannot get address in JAVA.
 
 --------------CONSTRUCTOR---------------
 - Constructor is a special function in a class which is called every time when we create an object and allocates some variable.
@@ -12,6 +13,7 @@
 - If you try to add a return type to a constructor, it will be treated as a method, and the compiler will not recognize it as a constructor.
 - A class can have multiple constructors, through a concept called constructor overloading. Constructor overloading allows a class to define multiple constructors with different parameters.
 - Using "this" keyword we can call another constructor from one constructor.
+
 
 --------------final KEYWORD-----------------
 - "final" keyword in JAVA is similar to const in other programming language.
@@ -28,6 +30,8 @@
 --------------PACKAGES--------------
 - In Java, a package is a mechanism to organize classes, interfaces, and sub-packages. It acts as a namespace, helping to avoid name conflicts and making code modular, easier to maintain, and reusable.
 - Packages can also control access to classes and their members, providing a way to group related types together.
+- "lang" Package in JAVA is automatically imported. -> package contains primitives etc.
+- "util" Package contains data structures, collection framework etc.
 
 
 --------------Static KEYWORD---------
@@ -53,7 +57,7 @@
 
 
 
--------------------IMPPPPP-------------------
+-------------------IMPORTANT-------------------
 - The left-hand side can have the parent class type as reference type.
 - The other way is NOT POSSIBLE.
 - The variables which we can access depends on the left-hand side.
@@ -127,7 +131,25 @@
 
 --------ACCESS MODIFIERS--------
 1. Private -> for sensitive data -> we can access them using getters and setter.
-2. Public
-3. Protected
+2. Public -> Access from anywhere.
+3. Protected -> don't want it to be accessed from outside the package but can be accessed by Child classes from outside package also.
+4. No Modifiers -> Used when we don't want it to be accessed from outside the package.
 
 - By default we can only access the variables inside the Class INSIDE PACKAGE and OUTSIDE PACKAGE NOT ALLOWED.
+- For PROTECTED -> in different package it can only be accessed by the Child Class Not the Parent Class itself.
+
+
+- obj1 == obj2 -> this is practically checking whether these two reference variables are pointing to the same object or not.
+- .equals() -> checking the content -> can be overridden.
+
+
+
+-------------- ABSTRACT CLASSES ---------------
+- If a Class contains one or more ABSTRACT METHODS then the CLASS should also be declared as ABSTRACT.
+- Abstract Methods only give the function definition with no body, it is the responsibility of the child to implement the body for the method.
+- The Child Class has to override all the methods in the Abstract Class.
+- We can have variables in Abstract Class.
+- We can also create Constructor in Abstract Class, they will be called by the Child Class using "super" keyword.
+- We CANNOT CREATE an OBJECT for ABSTRACT CLASS -> we have to override the methods.
+- We CANNOT CREATE ABSTRACT CONSTRUCTORS.
+- Abstract Static Methods -> NOT POSSIBLE -> Abstract methods are for overriding and Static methods Cannot be Overridden -> Therefore, it doesn't make sense.
