@@ -1,0 +1,133 @@
+--------------JAVA---------------
+- Java is Platform Independent -> program written in one platform can be run in another. Ex - Code written in Mac can be run in Windows. Possible because of JVM.
+- Java is Static Language.
+- Default value of Object is NULL. Ex -> String name; -> default value of name is NULL(String is class).
+- Objects are stored in HEAP and reference variables are stored in STACK.
+- Primitive data types are stored in STACK.
+- Java does not have pass-by-reference. Java uses pass-by-value for all variable passing.
+
+--------------CONSTRUCTOR---------------
+- Constructor is a special function in a class which is called every time when we create an object and allocates some variable.
+- Constructor has NO RETURN TYPE.
+- If you try to add a return type to a constructor, it will be treated as a method, and the compiler will not recognize it as a constructor.
+- A class can have multiple constructors, through a concept called constructor overloading. Constructor overloading allows a class to define multiple constructors with different parameters.
+- Using "this" keyword we can call another constructor from one constructor.
+
+--------------final KEYWORD-----------------
+- "final" keyword in JAVA is similar to const in other programming language.
+- final variable should be always initialized while declaring.
+- The immutability that you cannot change the value of the variable for final is true only for primitive data type.
+- For non-primitives, when it is final keyword, you cannot change the object to which the reference variable is pointing to but you can change the value of the object.
+
+
+------------GARBAGE COLLECTION-----------
+- JAVA has automatic Garbage collection.
+- We can specify some operations to perform when JAVA will do garbage collection -> Using "finalize" method -> somewhat similar to destructors in C++.
+
+
+--------------PACKAGES--------------
+- In Java, a package is a mechanism to organize classes, interfaces, and sub-packages. It acts as a namespace, helping to avoid name conflicts and making code modular, easier to maintain, and reusable.
+- Packages can also control access to classes and their members, providing a way to group related types together.
+
+
+--------------Static KEYWORD---------
+- The static keyword in Java is used to indicate that it belongs to the class itself, rather than to any specific instance of the class.
+- static member is shared among all instances of the class.
+- Memory for a static variable is created only once, at the time of class loading and happens before any object of the class is created.
+- Can be accessed using the class name.
+- Static members can be accessed without creating an instance of the class.
+- Exists throughout the lifecycle of the application.
+- Static method can only access static data.
+- Non-static method can access static data.
+
+- Static Block only get executed once, when class is loaded before any instance is created.
+- Can be used to initialize static variables.
+
+- Nested Classes -> Outer classes can never be static.
+- Inner classes can be static as they are dependent on outside class.
+
+------------Singleton Class---------------
+- Class which can create only one object.
+- How to create?
+- Make constructor private and method to return the instance of the class. So even on calling multiple time it returns same instance making sure only one instance is created for the class.
+
+
+
+-------------------IMPPPPP-------------------
+- The left-hand side can have the parent class type as reference type.
+- The other way is NOT POSSIBLE.
+- The variables which we can access depends on the left-hand side.
+- The object which we are accessing depend on the right-hand side.
+- BY DEFAULT -> All classes in JAVA are inherited from the OBJECT class.
+
+
+
+-------------OBJECT ORIENTED PROGRAMMING PRINCIPLES-------------------
+1. INHERITANCE
+- It is actually the type of reference variable and not the type of object which determines which all variables can be accessed.
+- "super" keyword directly points to the parent class above it.
+- can be used to call the constructor of parent.
+- can be used to refer the parent class variable directly.
+
+-?.Multiple Inheritance(A and B, then C extends both A and B) is NOT SUPPORTED in JAVA. WHY?
+- if A and B both have same variable and C tries to access that variable, JAVA not sure which to pick them. So not possible in JAVA.
+- In a way its possible using INTERFACES(defines what a class does not its values) in JAVA.
+
+- HYBRID Inheritance is a combination of Single and Multiple Inheritance. NOT SUPPORTED in JAVA as Multiple NOT SUPPORTED.
+- Possible with INTERFACES.
+
+
+
+2. POLYMORPHISM
+- Types of Polymorphism:-
+
+    1. Compile Time/ Static Polymorphism  -> Achieved by Method Overloading.
+       - Method Overloading Means Method name is same but number of arguments or type of arguments or ordering or return type etc. can be different. Example:- Multiple Constructors. Multiple Methods in the Class with same name.
+       - Its called Compile Time Polymorphism because JAVA determines which Method to call during Compile-time.
+
+    2. Run Time/ Dynamic Polymorphism or Late Binding-> Achieved by Method Overriding.
+       - Method Overriding -> when the child class has the same method as the parent class. Only the body is different, same name, parameters, return types etc.
+       - If the type of Reference Variable is -> Parent Class and the Object is of type -> Child Class.
+
+       - Parent obj = new Child();
+       - Here, the Method which is called depends on the Child and the method of the child is called -> This Known as UPCASTING.
+       - What variables which we can access depends on the reference variable.
+       - Hence Overriding works.
+
+       - ?.How JAVA determines which method to run?
+       - Java determines this using DYNAMIC METHOD DISPATCH -> This is why it is called DYNAMIC POLYMORPHISM.
+       - During run time only, it determines which method to run.
+
+
+- We can also use "final" KEYWORD to PREVENT OVERRIDING and also to PREVENT INHERITANCE.
+- If we put final keyword with a method then it can't be override.
+- final Method can't be overridden and call is resolved at compile time -> this is know as "Early Binding".
+
+- Make the class "final" -> then it can't be  inherited.
+- This also implicitly defines all the methods inside the class as final.
+
+- ?. CAN WE OVERRIDE STATIC METHODS?
+- NO, STATIC METHODS ARE NOT OVERRIDDEN AS STATIC METHODS DOES NOT DEPEND ON OBJECTS(OVERRIDING DEPENDS ON OBJECTS). IT WILL CALL THE STATIC METHOD IN PARENT ONLY. IT WILL BE INHERITED.
+
+- Both Overloading and Overriding does not apply to instance variables. They only apply on methods.
+
+
+3. ENCAPSULATION.
+- Wrapping up the implementation of the data members and methods in class.
+- Solving an implementation level issue.
+- Focus on Internal working.
+
+
+4. ABSTRACTION.
+- Hiding the unnecessary details and showing only valuable information.
+- Solving a design level issue.
+- Focus on External stuff.
+- Done by using Abstract classes and Interfaces.
+
+
+--------ACCESS MODIFIERS--------
+1. Private -> for sensitive data -> we can access them using getters and setter.
+2. Public
+3. Protected
+
+- By default we can only access the variables inside the Class INSIDE PACKAGE and OUTSIDE PACKAGE NOT ALLOWED.
