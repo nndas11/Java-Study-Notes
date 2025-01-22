@@ -150,6 +150,24 @@
 - The Child Class has to override all the methods in the Abstract Class.
 - We can have variables in Abstract Class.
 - We can also create Constructor in Abstract Class, they will be called by the Child Class using "super" keyword.
-- We CANNOT CREATE an OBJECT for ABSTRACT CLASS -> we have to override the methods.
+- We CANNOT CREATE an OBJECT for ABSTRACT CLASS -> we have to override the methods -> But we can use it as an reference variable.
 - We CANNOT CREATE ABSTRACT CONSTRUCTORS.
 - Abstract Static Methods -> NOT POSSIBLE -> Abstract methods are for overriding and Static methods Cannot be Overridden -> Therefore, it doesn't make sense.
+- STATIC METHODS in Abstract Class is POSSIBLE.
+- Normal Method also possible in Abstract Class.
+- "final" Abstract Class also NOT POSSIBLE -> "final" makes class not inheritable and cannot override then.
+
+
+------------------ INTERFACES --------------
+- MULTIPLE INHERITANCE is POSSIBLE in JAVA using INTERFACES.
+- Variables are STATIC and final by default.
+- Contain Abstract Methods.
+- Methods are ABSTRACT by default.
+- If both interfaces have same method and implementing it, then the class is just implementing it both.
+- Classes "implements" interfaces.
+- Interfaces can "extend" other interfaces.
+- From JAVA8, we can provide default implementations for interface methods.
+- STATIC Interface methods should always have a body.
+
+------------------ ANNOTATIONS -------------
+- They are also internally interfaces only.
