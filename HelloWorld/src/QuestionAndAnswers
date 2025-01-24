@@ -171,3 +171,25 @@
 
 ------------------ ANNOTATIONS -------------
 - They are also internally interfaces only.
+
+
+------------------ GENERICS ---------------
+- Helps us to store multiple data types -> like creating only template.
+- Helps to remove duplicate code.
+- type safety -> only the data type specified can be inserted.
+- We cannot create an instance of Generic type -> as the byte code won't know about this -> new T[].
+- We cannot create static variable of type generic also.
+- Overloading of Generics is also not allowed.
+- We can use WildCard to restrict the Generic Types -> <T extends Numbers> -> By this we can add Number Class and all the sub-classes of Number Class.
+- List<Number> -> Here we can only pass Number class not its subclasses.
+- But List<T extends Number> -> Here Number and all its sub-classes are allowed.
+- Interface can also have Generic Types.
+
+
+------------------- OBJECT COMPARISON ---------------
+- Object comparison makes use "Comparable" interface.
+
+------------------- Lambda Expressions ---------------
+- Similar to arrow functions in JS.
+- No function name.
+- Lambda Expressions can be assigned to variables that are of type interface -> but the interface can have only 1 method.

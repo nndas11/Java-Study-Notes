@@ -1,7 +1,7 @@
 package ObjectOrientedProgramming.properties.polymorphism;
 
 // STATIC POLYMORPHISM
-public class Numbers {
+public class Numbers1 {
 
     void print(int a,int b){
 
@@ -12,8 +12,8 @@ public class Numbers {
     }
 
     public static void main(String[] args) {
-        Numbers numbers = new Numbers();
-        numbers.print(1,2);
-        numbers.print(2.0,1);
+        Numbers1 numbers1 = new Numbers1();
+        numbers1.print(1,2);
+        numbers1.print(2.0,1);
     }
 }
