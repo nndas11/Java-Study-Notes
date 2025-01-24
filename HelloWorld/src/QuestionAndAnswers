@@ -193,3 +193,18 @@
 - Similar to arrow functions in JS.
 - No function name.
 - Lambda Expressions can be assigned to variables that are of type interface -> but the interface can have only 1 method.
+
+
+-------------------- Exceptions --------------
+- Exceptions are recoverable and program can handle it. Errors are not.
+
+                                                        ------- Errors
+                 Object Class -> Throwable Class -----
+                                                        ------- Exceptions
+
+- Exceptions are of two types:
+    1. Checked -> Exceptions which we get during compile time. Eg- trying to open a file and file not there then we get file not found exception.
+    2. Unchecked -> Detected only during runtime like divide by zero. Arithmetic Exception.
+
+- "throw" -> to throw an exception.
+- "throws" -> it may throw an exception used in class declaration.
