@@ -208,3 +208,22 @@
 
 - "throw" -> to throw an exception.
 - "throws" -> it may throw an exception used in class declaration.
+
+---------------- Cloning ---------------
+- Can use the clone method in Cloneable interface -> as it is more faster for copying.
+
+----------------- SHALLOW COPY -----------------
+- The reference variable is pointing to the same object.
+- Here for primitives new variables will be created but for non-primitives they will be pointing to the same object.
+
+
+----------------- DEEP COPY -------------------
+- Here for non-primitives also new object will be created -> they will be different objects.
+
+
+----------------- COLLECTIONS FRAMEWORK --------------
+- In ArrayList multiple threads can access the same object in the same time but not in Vector only one thread can access the object at a time. If the other thread want to access it has to wait.
+
+----------------- ENUM ----------------
+- All enum members are public, static, final.
+- Since its final we cannot create child enums.
