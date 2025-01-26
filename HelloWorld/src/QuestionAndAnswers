@@ -227,3 +227,4 @@
 ----------------- ENUM ----------------
 - All enum members are public, static, final.
 - Since its final we cannot create child enums.
+- Enum can implement interfaces -> so can have methods.
