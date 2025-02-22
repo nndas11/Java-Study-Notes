@@ -228,3 +228,30 @@
 - All enum members are public, static, final.
 - Since its final we cannot create child enums.
 - Enum can implement interfaces -> so can have methods.
+
+
+------------------- STREAMS ----------------------
+- Streams is like a pipeline, through which each element of collections pass through.
+- While elements passing through pipeline, we perform various operations like sorting, filtering etc.
+- Useful when dealing with "bulk processing" as it can do "parallel processing".
+- The original data is not changed.
+
+- 3 step process:
+     1. Create Stream: We create the Stream from the data source.
+     2. Intermediate Operation(Lazy in nature)[OPTIONAL]: We perform operations like filter, sort etc.. -> they convert one Stream to another. -> can have multiple operations.
+     3. Terminal operations[Only 1 allowed on 1 Stream]: are performed like collect(), count() etc. -> Terminal operations trigger the processing of the Stream -> They produce the output(which is new data) and close the Stream.
+
+
+- Intermediate operations are "Lazy in nature" -> they get executed only when terminal operations are invoked.
+
+- map() -> used to transform each element. ex- like make each string to lowercase.
+- flatMap() -> Used to iterate through each element of a complex collection and flatten it.
+- peek() -> Helps us to see the intermediate result of the Stream being processed.
+- mapToInt() -> Helps to work with primitive "int" data type. Similar methods is present for long, double etc.
+
+- While doing multiple intermediate operation on Stream, as each element is processed sequentially, the element goes through the intermediate operation as maximum asit can. Then the next element go(Checkout the code for POINT 1). Eg: For sorted operation it requires the full Stream.
+
+- "PARALLEL STREAM" -> Helps to perform operation on Stream concurrently, taking advantage of the multi-core CPU.
+- ParallelStream() method used instead of regular Stream() method.
+- Internally it divides into sub-tasks and do parallel processing and join the result -> "Use Fork-Join Method"
+- Each time fork() is called it is divided into sub-tasks.
